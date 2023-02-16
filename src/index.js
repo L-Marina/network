@@ -1,7 +1,17 @@
-import reportWebVitals from "./reportWebVitals";
-import state from "./redux/state";
-import { rerenderEntireTree } from "./render";
+import store from './redux/state';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-rerenderEntireTree(state);
+import './index.css';
+import App from './App';
 
-reportWebVitals();
+let rerenderEntireTree = (state) => {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
+  );
+};
+
+rerenderEntireTree(store.getState());
+
+store.subscribe(rerenderEntireTree);
