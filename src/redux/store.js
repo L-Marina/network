@@ -30,6 +30,7 @@ let store = {
       ],
       newMessageTextBody: '',
     },
+    sidebar: {},
   },
   getState() {
     return this._state;
