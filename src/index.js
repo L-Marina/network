@@ -1,20 +1,21 @@
 import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 
-let rerenderEntireTree = (state) => {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(
-    <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
-  );
-};
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>,
+//   document.getElementById('root')
+// );
 
-rerenderEntireTree(store.getState());
-
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const element = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+root.render(element);
