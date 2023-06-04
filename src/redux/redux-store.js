@@ -1,16 +1,18 @@
-import { combineReducers, legacy_createStore as createStore } from 'redux';
-import profileReducer from './ProfileReducer';
-import dialogsReducer from './DialogsReducer';
-import sidebarReducer from './SidebarReducer';
-import UsersReducer from './UsersReducer';
+import { applyMiddleware, legacy_createStore as createStore } from 'redux';
+import thunk from 'redux-thunk';
+import { rootReducer } from './rootReducer';
 
-let reducers = combineReducers({
-  profilePage: profileReducer,
-  dialogsPage: dialogsReducer,
-  sidebar: sidebarReducer,
-  usersPage: UsersReducer,
-});
+export const store = createStore(rootReducer, applyMiddleware(thunk));
 
-let store = createStore(reducers);
-window.store = store;
-export default store;
+//comment
+// import {combineReducers, legacy_createStore, legacy_createStore as createStore} from "redux";
+// import profileReducer from "./profileReducer";
+// import dialogsReducer from "./dialogsReducer";
+
+// let reducers = combineReducers({
+//     profilePage:profileReducer,
+//     dialogsPage:dialogsReducer
+// })
+
+// let store = legacy_createStore(reducers);
+// export default store
