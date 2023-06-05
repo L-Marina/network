@@ -1,16 +1,12 @@
-import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+
+import store from './redux/store/store';
+
 import './index.css';
 import App from './App';
-
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <App />
-//   </Provider>,
-//   document.getElementById('root')
-// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const element = (
@@ -19,3 +15,5 @@ const element = (
   </Provider>
 );
 root.render(element);
+
+reportWebVitals();

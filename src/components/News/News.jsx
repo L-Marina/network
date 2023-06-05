@@ -1,5 +1,4 @@
 import React from 'react';
-import s from './News.module.css';
 
 
 const News = (props) => {
@@ -9,4 +8,5 @@ const News = (props) => {
 		</div>
 	)
 }
+
 export default News;

@@ -1,9 +1,10 @@
 import React from 'react';
-import s from './MyPosts.module.css';
+
 import Post from './Post/Post';
+import MyButton from '../../common/button/MyButton';
+import classes from './MyPosts.module.css';
+import MyTextarea from '../../common/textarea/MyTextarea';
 
-
- 
 
 
 const MyPosts = (props) => {
@@ -16,28 +17,23 @@ const MyPosts = (props) => {
 		props.addPost();
 	}
 
-		let onPostChange = () => {
+	let onPostChange = () => {
 		let text = newPostElement.current.value;
 		props.updateNewPostText(text);
-
 	}
 
 	return ( 
-		<div className={s.postBlock}>
-					<h3>My posts</h3>
-					<div>
-						<div>
-							<textarea onChange = {onPostChange} ref = {newPostElement} value = {props.newPostText} />
-						</div>
+		<div className={classes.postBlock}>
+				<h3>My posts</h3>
+				
+				<MyTextarea onChange = {onPostChange} ref = {newPostElement} value = {props.newPostText}></MyTextarea> 
+					
+				<MyButton onClick = { onAddPost }>Add post</MyButton>
+					
+				<div className={classes.posts}>
+					{postsElements}
 						
-						<div>
-							<button onClick = { onAddPost }>Add post</button>
-							</div>
-					</div>
-					<div className={s.posts}>
-						{postsElements}
-						
-					</div>
+				</div>
 		</div>
 			
 	)

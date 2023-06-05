@@ -1,0 +1,6 @@
+.myTextarea {
+	display: block;
+	margin-bottom: 5px;
+	border: 2px solid rgb(172, 53, 53) ;
+	border-radius: 5px;
+}
