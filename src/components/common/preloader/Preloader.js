@@ -1,10 +1,11 @@
 import React from 'react';
-import preloader from '../../../assets/images/preloaders.gif';
+
+import preloader from '../images/preloader.gif';
 
 let Preloader = () => {
   return (
-    <div style={{ backgroundColor: 'aqua' }}>
-      <img src={preloader} />
+    <div>
+      <img src={preloader} alt='loading' />
     </div>
   );
 };

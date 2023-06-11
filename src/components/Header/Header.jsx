@@ -1,12 +1,12 @@
 import React from 'react';
-import s from './Header.module.css';
+import classes from './Header.module.css';
 
 
 const Header = () => {
 	return (
-		<header className = {s.header}>
-        		<img  src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-KEq0eLt41m1_9nWVIMxBDUgXzAgZCOHJQ&usqp=CAU " alt="logo" />
-      	</header>
+		<header className = {classes.header}>
+        	<img  src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxlcfUz2DrvVMSHTYuD_LaS9Uy8uD5gEUhg&usqp=CAU' 	alt="logo" />
+      </header>
 	)
 }
 
