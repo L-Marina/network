@@ -1,0 +1,16 @@
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px;
+	
+	
+}
+.images img {
+	display: block;
+	margin: 5px;
+	border-radius: 20%;
+	max-width: 20vw;
+	max-height: 20vw;
+}

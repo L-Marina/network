@@ -1,0 +1,6 @@
+.textarea {
+	display: block;
+	margin: 10px 0px;
+	border: 2px solid rgb(173, 104, 104) ;
+	border-radius: 5px;
+}
