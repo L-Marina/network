@@ -1,0 +1,57 @@
+.userList {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: stretch;
+}
+
+.user {
+	display: flex;
+	border: 1px dashed grey;
+	border-radius: 10px;
+	margin: 5px;
+	background-image: url(../../images/Fon.jpg);
+	background-size: cover;
+}
+
+.description {
+	margin: 10px;
+	padding: 5px;
+	color: grey;
+	break-inside: ; 
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 50%;
+}
+
+.userData {
+	flex: 0 1 50%;
+}
+
+.userStatus {
+	word-break: break-word;
+}
+
+.userPhoto {
+	width: 100px;
+	height: 100px;	
+	margin: 5px;
+	border-radius: 50%;
+}
+
+.pages {
+	margin: 20px 0px;
+}
+
+.page {
+	border:1px solid rgb(190, 18, 18);
+	border-radius: 100%;
+	margin: 0px 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.selectedPage {
+	font-weight:700;
+	color: rgb(172, 53, 53);
+}

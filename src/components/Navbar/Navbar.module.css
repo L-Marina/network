@@ -1,12 +1,26 @@
 .nav {
-	grid-area: nav;
-	background-color:  #729ca3; 
 	padding: 20px;
+	background-color:  rgba(199, 201, 202, 0.596);
+	
 }
 
 .item a {
-	color: white;
+	display: block;
+	margin: 10px;
+	padding: 5px;
+	color: rgb(122, 68, 68);
+	border: 1px solid rgb(197, 194, 194);
+	border-radius: 20px;
+	text-align: center;
 	text-decoration: none;
+	font-weight: bold;
+}
+
+.item a:hover {
+	border-color: rgb(15, 22, 58);
+	transform: scaleX(1.2);
+	
+	
 }
 
 .item a.active {

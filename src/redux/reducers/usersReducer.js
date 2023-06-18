@@ -2,10 +2,10 @@ import { USERS } from '../actionTypes/users';
 
 const initialState = {
   users: [],
-  pageSize: 5,
+  pageSize: 10,
   totalUsersCount: 0,
   currentPage: 1,
-  isFetching: false,
+  isLoading: false,
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -35,25 +35,25 @@ const usersReducer = (state = initialState, action) => {
     case USERS.SET_USERS:
       return {
         ...state,
-        users: action.users,
+        users: action.payload,
       };
 
     case USERS.SET_CURRENT_PAGE:
       return {
         ...state,
-        currentPage: action.currentPage,
+        currentPage: action.payload,
       };
 
     case USERS.SET_TOTAL_USERS_COUNT:
       return {
         ...state,
-        totalUsersCount: action.count,
+        totalUsersCount: action.payload,
       };
 
-    case USERS.TOGGLE_IS_FETCHING:
+    case USERS.TOGGLE_IS_LOADING:
       return {
         ...state,
-        isFetching: action.isFetching,
+        isLoading: action.payload,
       };
 
     default:
