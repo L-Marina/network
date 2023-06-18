@@ -18,7 +18,6 @@
 	margin: 10px;
 	padding: 5px;
 	color: grey;
-	break-inside: ; 
 	display: flex;
 	flex-direction: column;
 	flex: 0 1 50%;
