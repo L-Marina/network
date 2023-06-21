@@ -1,16 +1,50 @@
-.userList {
+.users {
 	display: flex;
 	flex-direction: column;
-	justify-content:center;
-	align-items: stretch;
+}
+
+.userList {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+@media(max-width:800px){
+	.userList {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+}
+@media(max-width:500px){
+	.userList {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	
 }
 
 .user {
 	display: flex;
-	border: 1px dashed grey;
-	border-radius: 10px;
-	margin: 5px;
-	background-image: url(../../images/Fon.jpg);
+	border: 1px dashed rgba(138, 58, 4, 0.822);
+	border-radius: 20px;
+	background: url(../../images/fon.jpg);
+	background-size: cover;
+	margin: 15px;
+	overflow: hidden;
+	width: 35vw;
+}
+@media(max-width:800px){
+	.user {
+		width: 50vw;
+	}
+	
+}
+
+.avatar {
+	background: url(../../images/brown.jpg);
 	background-size: cover;
 }
 
@@ -18,10 +52,8 @@
 	margin: 10px;
 	padding: 5px;
 	color: grey;
-	break-inside: ; 
 	display: flex;
 	flex-direction: column;
-	flex: 0 1 50%;
 }
 
 .userData {

@@ -1,16 +1,17 @@
 import React from 'react';
 
-import Post from './Post/Post';
-import Button from '../../../components/button/Button';
-import Textarea from '../../../components/textarea/Textarea';
+import Post from './Post';
+import Button from '../../../components/Button';
+import Textarea from '../../../components/Textarea';
 import classes from './Posts.module.css';
 
 
 
-const Posts = (props) => {
-	
-	let postsElements = props.posts.map((page, index) => <Post message = {page.message} likesCount = {page.likesCount} />);
+ export const Posts = (props) => {
 
+
+	let postsElements = props.posts.map((page, index) => <Post message = {page.message} key={index} likesCount = {page.likesCount} />);
+	
 	let newPostElement = React.createRef();
 
 	let onAddPost = () => {
@@ -39,5 +40,5 @@ const Posts = (props) => {
 	)
 }
 
-export default Posts;
+
 

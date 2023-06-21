@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import cn from 'classnames';
-import Button from '../button/Button';
+
+import Button from '../Button';
 import classes from './Paginator.module.css';
 
 
-const  Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
+export const  Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
 	let pagesCount = Math.ceil (totalUsersCount/pageSize);
 		
 			let pages = [];
@@ -46,7 +47,7 @@ const  Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged, port
 }	
 
 
-export default  Paginator;
+
 
 
 

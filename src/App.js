@@ -1,14 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Layout from './components/layout/Layout';
-import Profile from './pages/Profile/Profile';
-import Dialogs from './pages/Dialogs/Dialogs';
-import Users from './pages/Users/Users';
+import Layout from './components/Layout';
+import Profile from './pages/Profile';
+import Dialogs from './pages/Dialogs';
+import Users from './pages/Users';
 import Images from './pages/Album/Icons';
-import NotFoundPage from './components/NotFoundPage/NotFoundPage';
-
-// import './App.css';
+import NotFoundPage from './pages/NotFoundPage';
 
 const App = (props) => {
   return (

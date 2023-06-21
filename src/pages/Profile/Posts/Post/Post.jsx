@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Post.module.css';
 import postUser from '../../../../images/postUser.jpg';
 
-const Post = (props) => {
+export const Post = (props) => {
 	return (
 			<div className={classes.item}>
 				<img src={postUser} alt=''/>
@@ -15,5 +15,5 @@ const Post = (props) => {
 	)
 }
 
-export default Post;
+
 

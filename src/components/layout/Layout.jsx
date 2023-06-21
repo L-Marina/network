@@ -1,11 +1,13 @@
+import React from 'react';
 import { Outlet} from 'react-router-dom';
 
-import Header from '../Header/Header';
-import Navbar from '../Navbar/Navbar';
+import Header from '../Header';
+import Navbar from '../Navbar';
+import Footer  from '../Footer';
 import classes from './Layout.module.css';
 
 
-const Layout = () => {
+export const Layout = () => {
 	return (
 		<div className={classes.layout}>
 				<Header />
@@ -16,8 +18,9 @@ const Layout = () => {
 						<Outlet />
 					</div>
 				</div>
+
+				<Footer />
+
 		</div>
 	)
 }
-
-export default Layout;

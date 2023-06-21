@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import DialogItem from './DialogItem/DialogItem';
-import Message from './Message/Message';
-import Button from '../../components/button/Button';
-import Textarea from '../../components/textarea/Textarea';
+import DialogItem from './DialogItem';
+import Message from './Message';
+import Button from '../../components/Button';
+import Textarea from '../../components/Textarea';
 import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/actionCreators/dialogsActionCreators';
 import classes from './Dialogs.module.css';
 
@@ -72,6 +72,5 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-const Dialogs = connect(mapStateToProps,mapDispatchToProps) (DialogsComponent);
+export const Dialogs = connect(mapStateToProps,mapDispatchToProps) (DialogsComponent);
 
-export default Dialogs;
