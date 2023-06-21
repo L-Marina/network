@@ -1,10 +1,10 @@
 import React from 'react';
 
 import PostsContainer from './Posts/PostsContainer';
-import ProfileInfo from './ProfileInfo/ProfileInfo';
+import ProfileInfo from './ProfileInfo';
 
 
-const Profile = (props) => {
+export const Profile = (props) => {
 	
 	return ( 
 			<div>
@@ -14,4 +14,3 @@ const Profile = (props) => {
 	)
 }
 
-export default Profile;

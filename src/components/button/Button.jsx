@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Button.module.css';
 
-const Button = ({children, ...props}) => {
+export const Button = ({children, ...props}) => {
 	return (
 		<button {...props} className={classes.btn}>
 			{children}
@@ -10,4 +10,3 @@ const Button = ({children, ...props}) => {
 	)
 }
 
-export default Button;

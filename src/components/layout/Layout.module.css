@@ -2,15 +2,22 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	min-height: 100vw;
 	max-width: 1200px;
 	margin: 0px auto;
 }
 
 .wrapper {
 	display: flex;
+	width: 100%;
+	min-height: 100vw;
 	background-color:  rgba(182, 179, 178, 0.185);
 	background-image: url(../../images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	
+}
+.content {
+	
 	
 }

@@ -4,12 +4,11 @@ import classes from './Header.module.css';
 import logo from '../../images/welcome.jpg';
 
 
-const Header = () => {
+export const Header = () => {
 	return (
 		<header className = {classes.header}>
-        	<img  src = {logo} alt='' />
+        	 <img  src = {logo} alt='' /> 
       </header>
 	)
 }
 
-export default Header;
