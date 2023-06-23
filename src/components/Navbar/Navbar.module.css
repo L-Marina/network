@@ -24,17 +24,17 @@
 	font-weight: bold;
 }
 
-.item a:hover {
-	border-color: rgb(15, 22, 58);
-	transform: scaleX(1.2);
-	transition: all 0.3s;
-	
-	
-}
-
 .item a.active {
 	color: rgba(247, 9, 9, 0.692);
 	font-weight: bold;
 	transform: none;
 }
 
+.item a:hover {
+	border-color: rgb(15, 22, 58);
+	transform: scaleX(1.2);
+	box-shadow: 5px  0 5px rgb(15, 22, 58);
+	transition: all 0.5s;
+	
+	
+}

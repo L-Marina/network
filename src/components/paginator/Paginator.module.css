@@ -21,6 +21,7 @@
 }
 .pageNumber:hover {
 	border-color: rgb(172, 53, 53);
+	box-shadow: 0 0 5px rgb(112, 102, 102);
 	transform: scaleY(1.2);
 }
 
