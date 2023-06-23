@@ -15,9 +15,23 @@
 	background-image: url(../../images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow: hidden;
 	
 }
+
 .content {
-	
-	
+	width: 100%;
+}
+@media(max-width:500px){
+	.wrapper {
+		display: flex;
+		flex-direction:column;
+		justify-content: center;
+		margin-top: 10px;
+		
+	}
+	.content {
+		align-self: center;
+		
+	}
 }

@@ -4,6 +4,14 @@
 	text-align: center;
 	justify-content: center;
 }
+
+@media(max-width:700px) {
+	.paginator {
+		margin: 5px;
+		flex-wrap: wrap;
+	}
+}
+
 .pageNumber {
 	padding: 2px;
 	border: solid 1px rgb(197, 194, 194);

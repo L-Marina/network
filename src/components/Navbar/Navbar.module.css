@@ -1,8 +1,16 @@
 .nav {
 	padding: 20px;
 	background-color:  rgba(199, 201, 202, 0.596);
-	
+	display: flex;
+	flex-direction: column;
 }
+@media(max-width:500px) {
+	.nav  {
+		margin: 20px;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+} 
 
 .item a {
 	display: block;
@@ -19,6 +27,7 @@
 .item a:hover {
 	border-color: rgb(15, 22, 58);
 	transform: scaleX(1.2);
+	transition: all 0.3s;
 	
 	
 }
@@ -26,4 +35,6 @@
 .item a.active {
 	color: rgba(247, 9, 9, 0.692);
 	font-weight: bold;
+	transform: none;
 }
+
