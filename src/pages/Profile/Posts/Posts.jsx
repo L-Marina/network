@@ -12,14 +12,13 @@ import classes from './Posts.module.css';
 
 	let postsElements = props.posts.map((page, index) => <Post message = {page.message} key={index} likesCount = {page.likesCount} />);
 	
-	let newPostElement = React.createRef();
 
 	let onAddPost = () => {
 		props.addPost();
 	}
 
-	let onPostChange = () => {
-		let text = newPostElement.current.value;
+	let onPostChange = (e) => {
+		let text = e.target.value;
 		props.updateNewPostText(text);
 	}
 
@@ -27,7 +26,9 @@ import classes from './Posts.module.css';
 		<div className={classes.postBlock}>
 				<h3> Posts</h3>
 				
-				<Textarea onChange = {onPostChange} ref = {newPostElement} value = {props.newPostText}></Textarea> 
+				<Textarea onChange = {onPostChange} 
+			
+				value = {props.newPostText}></Textarea> 
 					
 				<Button onClick = { onAddPost }>Add post</Button>
 					

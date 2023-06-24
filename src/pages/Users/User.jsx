@@ -22,10 +22,10 @@ const  User = (props) => {
 				{props.users.map(u => 
 					<div className= {classes.user} key={u.id}>
 						<div className= {classes.avatar}>
-							<div>
+							<div className= {classes.photo}>
 								<img src={u.photos.small !==null ? u.photos.small : userPhoto } className={classes.userPhoto} alt=''/>
 							</div>
-							<div>
+							<div className= {classes.button}>
 								{u.followed 
 								? <Button onClick={ () => {props.follow(u.id) } } > Follow </Button> 
 								: <Button onClick={ () => {props.unfollow(u.id) } }> Unfollow </Button> 

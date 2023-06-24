@@ -1,6 +1,7 @@
 .users {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
 .userList {
@@ -35,17 +36,31 @@
 	margin: 15px;
 	overflow: hidden;
 	width: 35vw;
+	
 }
 @media(max-width:800px){
 	.user {
 		width: 50vw;
+
 	}
 	
+}
+@media(max-width:500px){
+	.user {
+		width: 80vw;
+	}
+	.userPhoto {
+		width: 50px;
+		height: 50px;	
+	}
 }
 
 .avatar {
 	background: url(../../images/brown.jpg);
 	background-size: cover;
+	 display: flex;
+	flex-direction: column; 
+	
 }
 
 .description {

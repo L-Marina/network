@@ -1,8 +1,18 @@
 .profileInfo {
 	margin: 20px;
+	display: flex;
+	flex-direction: column;
 
 }
 
+.imageBlock {
+	flex: 1 1 auto;
+	overflow: hidden;
+}
+.imageBlock img {
+	display: block;
+
+}
 .descriptionBlock {
 	padding: 10px;
 }

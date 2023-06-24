@@ -17,13 +17,15 @@
 	display: block;
 	margin: 10px;
 	padding: 5px;
-	border: 1px solid rgb(61, 62, 70);
+	border: 1px solid rgba(138, 58, 4, 0.822);
 	border-radius: 10px;
 }
 
 .dialogsItems a:hover{
 	color: rgb(50, 42, 165);
 	text-decoration: underline;
+	box-shadow: 5px 0 5px  rgba(138, 58, 4, 0.822);
+	transition: all 0.3s;
 }
 
 .dialogsItems .active{
