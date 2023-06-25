@@ -1,24 +1,22 @@
 import React from 'react';
 
-import Post from './Post/Post';
-import Button from '../../../components/button/Button';
-import Textarea from '../../../components/textarea/Textarea';
+import Post from './Post';
+import Button from '../../../components/Button';
+import Textarea from '../../../components/Textarea';
 import classes from './Posts.module.css';
 
 
 
-const Posts = (props) => {
-	
+export const Posts = (props) => {
+
 	let postsElements = props.posts.map((page, index) => <Post message = {page.message} key={index} likesCount = {page.likesCount} />);
-
-	let newPostElement = React.createRef();
-
+	
 	let onAddPost = () => {
 		props.addPost();
 	}
 
-	let onPostChange = () => {
-		let text = newPostElement.current.value;
+	let onPostChange = (e) => {
+		let text = e.target.value;
 		props.updateNewPostText(text);
 	}
 
@@ -26,7 +24,9 @@ const Posts = (props) => {
 		<div className={classes.postBlock}>
 				<h3> Posts</h3>
 				
-				<Textarea onChange = {onPostChange} ref = {newPostElement} value = {props.newPostText}></Textarea> 
+				<Textarea onChange = {onPostChange} 
+			
+				value = {props.newPostText}></Textarea> 
 					
 				<Button onClick = { onAddPost }>Add post</Button>
 					
@@ -39,5 +39,5 @@ const Posts = (props) => {
 	)
 }
 
-export default Posts;
+
 

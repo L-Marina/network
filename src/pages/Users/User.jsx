@@ -2,8 +2,8 @@ import React from 'react';
 
 import classes from './User.module.css';
 import userPhoto from '../../images/user.png';
-import Button from '../../components/button/Button';
-import Paginator from '../../components/paginator/Paginator';
+import Button from '../../components/Button';
+import Paginator from '../../components/Paginator';
 
 
 const  User = (props) => {
@@ -22,12 +22,13 @@ const  User = (props) => {
 				{props.users.map(u => 
 					<div className= {classes.user} key={u.id}>
 						<div className= {classes.avatar}>
-							<div>
+							<div className= {classes.photo}>
 								<img src={u.photos.small !==null ? u.photos.small : userPhoto } className={classes.userPhoto} alt=''/>
 							</div>
-							<div>
-								{u.followed ? <Button onClick={ () => {props.unfollow(u.id) } } > Unfollow </Button> 
-							: <Button onClick={ () => {props.follow(u.id) } }> Follow </Button> 
+							<div className= {classes.button}>
+								{u.followed 
+								? <Button onClick={ () => {props.follow(u.id) } } > Follow </Button> 
+								: <Button onClick={ () => {props.unfollow(u.id) } }> Unfollow </Button> 
 								}
 							</div>
 						</div>

@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import {followAC, unfollowAC, setUsersAC, setCurrentPageAC,
 	 setTotalUsersCountAC, toggleIsLoadingAC} from '../../redux/actionCreators/usersActionCreators';
 import User from './User';
-import Preloader from '../../components/preloader/Preloader';
+import Preloader from '../../components/Preloader';
 
 
-class Users extends React.Component {	
+ class Users extends React.Component {	
 	componentDidMount() {
 		this.props.toggleIsLoading(true);
 		axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
@@ -88,4 +88,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Users);
+ export default connect(mapStateToProps, mapDispatchToProps) (Users);
