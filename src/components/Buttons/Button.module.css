@@ -1,6 +1,6 @@
 .btn {
 	background-color: rgb(197, 194, 194);
-	color:rgb(172, 53, 53);
+	color: rgb(172, 53, 53);
 	margin: 5px;
 	padding: 5px 15px;
 	font-size: 14px;
@@ -11,11 +11,9 @@
 }
 
 .btn:hover {
-	background-color:  rgb(172, 53, 53);
+	background-color: rgb(172, 53, 53);
 	color: white;
 	transform: scaleY(1.2);
 	box-shadow: 0 0 5px rgb(112, 102, 102);
 	transition: all 0.5s;
-	
 }
-
