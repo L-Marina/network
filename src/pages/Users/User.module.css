@@ -10,57 +10,61 @@
 	margin: 10px;
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
 	.userList {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
 	.userList {
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
-	
+
 }
 
 .user {
 	display: flex;
 	border: 1px dashed rgba(138, 58, 4, 0.822);
 	border-radius: 20px;
-	background: url(../../images/fon.jpg);
+	background: url(../../images/fonUser.jpg);
 	background-size: cover;
 	margin: 15px;
 	overflow: hidden;
 	width: 35vw;
-	
+
 }
-@media(max-width:800px){
+
+@media(max-width:800px) {
 	.user {
 		width: 50vw;
 
 	}
-	
+
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
 	.user {
 		width: 80vw;
 	}
+
 	.userPhoto {
 		width: 50px;
-		height: 50px;	
+		height: 50px;
 	}
 }
 
 .avatar {
 	background: url(../../images/brown.jpg);
 	background-size: cover;
-	 display: flex;
-	flex-direction: column; 
-	
+	display: flex;
+	flex-direction: column;
+
 }
 
 .description {
@@ -81,7 +85,7 @@
 
 .userPhoto {
 	width: 100px;
-	height: 100px;	
+	height: 100px;
 	margin: 5px;
 	border-radius: 50%;
 }
@@ -91,7 +95,7 @@
 }
 
 .page {
-	border:1px solid rgb(190, 18, 18);
+	border: 1px solid rgb(190, 18, 18);
 	border-radius: 100%;
 	margin: 0px 10px;
 	padding: 5px 10px;
@@ -99,6 +103,6 @@
 }
 
 .selectedPage {
-	font-weight:700;
+	font-weight: 700;
 	color: rgb(172, 53, 53);
 }
